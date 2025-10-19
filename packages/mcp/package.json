@@ -1,0 +1,12 @@
+{
+  "name": "@time-and-rice/design-system-example-mcp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "echo 'TODO: mcp:build'",
+    "check": "echo 'TODO: mcp:check'",
+    "check:write": "echo 'TODO: mcp:check:write'",
+    "typecheck": "echo 'TODO: mcp:typecheck'"
+  },
+  "packageManager": "pnpm@10.18.3"
+}

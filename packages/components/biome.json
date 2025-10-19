@@ -1,0 +1,12 @@
+{
+  "root": false,
+  "extends": "//",
+  "files": {
+    "includes": [
+      "*.{js,ts}",
+      "src/**/*",
+      ".storybook/**/*",
+      "!.storybook/global.css"
+    ]
+  }
+}
