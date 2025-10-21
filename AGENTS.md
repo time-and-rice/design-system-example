@@ -1,2 +1,2 @@
 - Think in English and respond with Japanese.
-- Conventional Commits.
+- Write commit messages in English using Conventional Commits.

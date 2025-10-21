@@ -2,11 +2,6 @@
   "root": false,
   "extends": "//",
   "files": {
-    "includes": [
-      "*.{js,ts}",
-      "src/**/*",
-      ".storybook/**/*",
-      "!.storybook/global.css"
-    ]
+    "includes": ["*.{js,ts}", "src/**/*", ".storybook/**/*", "!src/plugin.css"]
   }
 }
