@@ -13,10 +13,11 @@
     "plg:check:write": "pnpm -F @time-and-rice/design-system-example-plugin exec biome check --write",
     "w:build": "pnpm -rF './packages/*' run build",
     "w:changeset": "changeset",
-    "w:check": "pnpm -rF './packages/*' exec biome check",
-    "w:check:write": "pnpm -rF './packages/*' exec biome check --write",
+    "w:check": "pnpm -rF './packages/*' run check",
+    "w:check:write": "pnpm -rF './packages/*' run check:write",
     "w:pkg:sort": "sort-package-json ./package.json ./packages/*/package.json",
-    "w:release": "changeset publish",
+    "w:publish": "changeset publish",
+    "w:typecheck": "pnpm -rF './packages/*' run typecheck",
     "w:version": "changeset version"
   },
   "devDependencies": {
