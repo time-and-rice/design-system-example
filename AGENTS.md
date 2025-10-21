@@ -1,1 +1,2 @@
 - Think in English and respond with Japanese.
+- Conventional Commits.

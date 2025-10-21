@@ -1,12 +1,15 @@
 on:
-  workflow_dispatch:
+  pull_request:
 
 permissions:
   contents: read
-  packages: write
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  publish:
+  quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,10 +19,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22.20.0
-          registry-url: https://npm.pkg.github.com
-          scope: "@time-and-rice"
+          cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm run w:check
+      - run: pnpm run w:typecheck
       - run: pnpm run w:build
-      - run: pnpm run w:publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
