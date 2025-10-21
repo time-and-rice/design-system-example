@@ -1,6 +1,6 @@
 {
   "name": "@time-and-rice/design-system-example",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "type": "module",
   "exports": {
