@@ -19,7 +19,7 @@ jobs:
           registry-url: https://npm.pkg.github.com
           scope: "@time-and-rice"
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run w:build
-      - run: pnpm run w:publish
+      - run: pnpm run build
+      - run: pnpm run publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
